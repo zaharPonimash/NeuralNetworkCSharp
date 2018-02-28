@@ -13,10 +13,71 @@ namespace AI.NeuronNetwork.Base.LayerType
 	/// <summary>
 	/// Description of LSTM.
 	/// </summary>
-	public class LSTM
+	public class LSTM<T> : ILayer<T>
 	{
 		public LSTM()
 		{
 		}
+
+		#region ILayer implementation
+
+		public Tensor4<T> Output(Tensor4<T> input)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void Delt(Tensor4<T> ideal)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void DeltH(ILayer<T> layer)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Tensor4<T> Backwards()
+		{
+			throw new NotImplementedException();
+		}
+
+		public void Train()
+		{
+			throw new NotImplementedException();
+		}
+
+		public void SetParam(int inp, int outp, int deep, int batchSize)
+		{
+			throw new NotImplementedException();
+		}
+
+		public int[] SizeOut {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
+		public double Eps {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
+		public Tensor4<T> Delts {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
+		#endregion
 	}
 }
