@@ -13,9 +13,9 @@ namespace AI.NeuronNetwork.Base.LayerType
 	/// <summary>
 	/// Description of Softmax.
 	/// </summary>
-	public class Softmax
+	public class FullConnect
 	{
-		public Softmax()
+		public FullConnect()
 		{
 		}
 	}
