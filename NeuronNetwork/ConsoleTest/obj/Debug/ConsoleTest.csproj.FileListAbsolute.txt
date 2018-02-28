@@ -1,0 +1,8 @@
+C:\Users\admin\Desktop\ИИ\GitHub\NeuralNetworkCSharp\NeuronNetwork\ConsoleTest\bin\Debug\ConsoleTest.exe.config
+C:\Users\admin\Desktop\ИИ\GitHub\NeuralNetworkCSharp\NeuronNetwork\ConsoleTest\bin\Debug\ConsoleTest.exe
+C:\Users\admin\Desktop\ИИ\GitHub\NeuralNetworkCSharp\NeuronNetwork\ConsoleTest\bin\Debug\ConsoleTest.pdb
+C:\Users\admin\Desktop\ИИ\GitHub\NeuralNetworkCSharp\NeuronNetwork\ConsoleTest\obj\Debug\ConsoleTest.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\ИИ\GitHub\NeuralNetworkCSharp\NeuronNetwork\ConsoleTest\obj\Debug\ConsoleTest.exe
+C:\Users\admin\Desktop\ИИ\GitHub\NeuralNetworkCSharp\NeuronNetwork\ConsoleTest\obj\Debug\ConsoleTest.pdb
+C:\Users\admin\Desktop\ИИ\GitHub\NeuralNetworkCSharp\NeuronNetwork\ConsoleTest\bin\Debug\AI.NeuronNetwork.dll
+C:\Users\admin\Desktop\ИИ\GitHub\NeuralNetworkCSharp\NeuronNetwork\ConsoleTest\bin\Debug\AI.NeuronNetwork.pdb
