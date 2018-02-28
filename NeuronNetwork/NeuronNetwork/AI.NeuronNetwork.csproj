@@ -45,13 +45,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\ActivationType\Gauss.cs" />
+    <Compile Include="Base\ActivationType\Maxout.cs" />
+    <Compile Include="Base\ActivationType\ReLu.cs" />
+    <Compile Include="Base\ActivationType\Sigmoid.cs" />
+    <Compile Include="Base\ActivationType\Sin.cs" />
+    <Compile Include="Base\ActivationType\Softmax.cs" />
+    <Compile Include="Base\ActivationType\Tanh.cs" />
     <Compile Include="Base\ILayer.cs" />
     <Compile Include="Base\ITensor.cs" />
+    <Compile Include="Base\LayerType\Convolution.cs" />
+    <Compile Include="Base\LayerType\FullConect.cs" />
+    <Compile Include="Base\LayerType\GRU.cs" />
+    <Compile Include="Base\LayerType\LSTM.cs" />
+    <Compile Include="Base\LayerType\Pooling.cs" />
+    <Compile Include="Base\LayerType\UnPooling.cs" />
     <Compile Include="Base\Tensor4.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Base" />
+    <Folder Include="Base\LayerType" />
+    <Folder Include="Base\ActivationType" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
