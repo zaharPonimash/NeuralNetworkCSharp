@@ -55,7 +55,7 @@
     <Compile Include="Base\IActivation.cs" />
     <Compile Include="Base\ILayer.cs" />
     <Compile Include="Base\LayerType\Convolution.cs" />
-    <Compile Include="Base\LayerType\FullConect.cs" />
+    <Compile Include="Base\LayerType\FullConnect.cs" />
     <Compile Include="Base\LayerType\GRU.cs" />
     <Compile Include="Base\LayerType\LSTM.cs" />
     <Compile Include="Base\LayerType\Pooling.cs" />

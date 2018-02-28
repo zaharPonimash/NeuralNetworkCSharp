@@ -20,11 +20,26 @@ namespace AI.NeuronNetwork
 		
 		List<ILayer<T>> layers = new List<ILayer<T>>();
 		
-		public Network()
+		public Network(OptimiserType opt = OptimiserType.StohasticGradientDecent)
 		{
+			
 		}
 		
 		
 		
+	}
+	
+	/// <summary>
+	/// Методы обучения
+	/// </summary>
+	public enum OptimiserType
+	{
+		Adam,
+		Adadelta,
+		Adagrad,
+		Windowgrad,
+		StohasticGradientDecent,
+		GradientDecent,
+		LevenbergMarquardt
 	}
 }
