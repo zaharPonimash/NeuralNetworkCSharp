@@ -2,7 +2,7 @@
  * Создано в SharpDevelop.
  * Пользователь: admin
  * Дата: 28.02.2018
- * Время: 20:48
+ * Время: 22:08
  * 
  * Для изменения этого шаблона используйте меню "Инструменты | Параметры | Кодирование | Стандартные заголовки".
  */
@@ -11,15 +11,10 @@ using System;
 namespace AI.NeuronNetwork.Base
 {
 	/// <summary>
-	/// Description of Tensor4.
+	/// Description of IActivation.
 	/// </summary>
-	public class Tensor4<T>
+	public interface IActivation
 	{
 		
-		
-		
-		public Tensor4()
-		{
-		}
 	}
 }

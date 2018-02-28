@@ -13,8 +13,28 @@ namespace AI.NeuronNetwork.Base
 	/// <summary>
 	/// Description of ILayer.
 	/// </summary>
-	public interface ILayer
+	public interface ILayer<T>
 	{
+		int[] SizeOut{set; get;}
 		
+		double Eps{set; get;}
+		
+		//Дельты
+		Tensor4<T> Delts{set; get;}
+		
+		// Прямой проход сети
+		Tensor4<T> Output(Tensor4<T> input);
+		
+		// Ошибка на выходе
+		void Delt(Tensor4<T> ideal);
+		
+		void DeltH(ILayer<T> layer);
+		
+		// Обратный проход
+		Tensor4<T> Backwards();
+		
+		void Train();
+		
+		void SetParam(int inp, int outp, int deep, int batchSize);
 	}
 }
