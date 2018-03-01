@@ -15,6 +15,15 @@ namespace AI.NeuronNetwork.Base.ActivationType
 	/// </summary>
 	public class Softmax<T>: ILayer<T>, IActivation
 	{
+		public int OutDim {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
 		public double Norm {
 			get {
 				throw new NotImplementedException();

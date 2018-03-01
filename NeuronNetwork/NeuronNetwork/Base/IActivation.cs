@@ -15,6 +15,6 @@ namespace AI.NeuronNetwork.Base
 	/// </summary>
 	public interface IActivation
 	{
-		
+		double Eps{set; get;}
 	}
 }

@@ -15,6 +15,15 @@ namespace AI.NeuronNetwork.Base.LayerType
 	/// </summary>
 	public class Pooling<T>: ILayer<T>
 	{
+		public int OutDim {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
 		public double Norm {
 			get {
 				throw new NotImplementedException();

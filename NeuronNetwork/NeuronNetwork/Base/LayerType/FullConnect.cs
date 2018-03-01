@@ -16,72 +16,33 @@ namespace AI.NeuronNetwork.Base.LayerType
 	/// </summary>
 	public class FullConnect<T> : ILayer<T>
 	{
-		public double Norm {
-			get {
-				throw new NotImplementedException();
-			}
-			set {
-				throw new NotImplementedException();
-			}
-		}
+		public int OutDim {get; set;}
 
-		public Tensor4<bool> Drop {
-			get {
-				throw new NotImplementedException();
-			}
-			set {
-				throw new NotImplementedException();
-			}
-		}
+		public double Norm{get; set;}
 
-	public Tensor4<T> Weights {
-		get {
-			throw new NotImplementedException();
-		}
-		set {
-			throw new NotImplementedException();
-		}
-	}
+		public Tensor4<bool> Drop {get; set;}
 
+		public Tensor4<T> Weights {get; set;}
+
+		public int[] SizeOut {get; set;}
+
+		public Tensor4<T> Delts {get; set;}
 		
-		public int[] SizeOut {
-			get {
-				throw new NotImplementedException();
-			}
-			set {
-				throw new NotImplementedException();
-			}
-		}
-
-		public double Eps {
-			get {
-				throw new NotImplementedException();
-			}
-			set {
-				throw new NotImplementedException();
-			}
-		}
-
-		public Tensor4<T> Delts {
-			get {
-				throw new NotImplementedException();
-			}
-			set {
-				throw new NotImplementedException();
-			}
-		}
+		Random rnd = new Random();
 		
 		
 		
-		public FullConnect()
+		public FullConnect( int inp, int outp, int bs)
 		{
+			SetParam(1, outp, inp, bs);
 		}
 
 		#region ILayer implementation
 
 		public Tensor4<T> Output(Tensor4<T> input)
 		{
-			throw new NotImplementedException();
+			Tensor4<T> newInp = Tensor4<T>.DeepAdd1(input);
+			return Tensor4<T>.MultAsMatrix(Weights, newInp);
 		}
 
 		public void Delt(Tensor4<T> ideal)
@@ -104,9 +65,15 @@ namespace AI.NeuronNetwork.Base.LayerType
 			throw new NotImplementedException();
 		}
 
-		public void SetParam(int inp, int outp, int deep, int batchSize)
+		public void SetParam(int w, int outp, int inp, int batchSize)
 		{
-			throw new NotImplementedException();
+			SizeOut = new int[4];
+			rnd = new Random();
+			SizeOut[0] 	= w;
+			SizeOut[1]	= inp;
+			SizeOut[2] 	= outp;
+			SizeOut[3] 	= batchSize;
+			Weights = new Tensor4<T>(1, inp+1, outp, 1, rnd);
 		}
 
 

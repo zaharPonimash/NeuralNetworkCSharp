@@ -38,7 +38,41 @@ namespace AI.NeuronNetwork.Base
 		
 		public Tensor4(int w, int h, int d, int bs)
 		{
+			W = w;
+			H = h;
+			D = d;
+			BS = bs;
 			Tensor = new T[w,h,d,bs];
+		}
+		
+		public Tensor4(int w, int h, int d, int bs, Random rnd)
+		{
+			Tensor = new T[w,h,d,bs];
+			W = w;
+			H = h;
+			D = d;
+			BS = bs;
+			
+			try
+			{
+			float scale = (float)2.0/(w*h*d*bs);
+			
+			for (int i = 0; i < w; i++) 
+				for (int j = 0; j < h; j++)
+					for (int k = 0; k < d; k++)
+						for (int z = 0; z < bs; z++)
+							Tensor[i, j, k, z] = (dynamic)(float)((rnd.NextDouble()-0.5)*scale);
+			}
+			
+			catch
+			{
+			for (int i = 0; i < w; i++) 
+				for (int j = 0; j < h; j++)
+					for (int k = 0; k < d; k++)
+						for (int z = 0; z < bs; z++)
+							Tensor[i, j, k, z] = (dynamic)((rnd.Next(-10, 10)));
+			
+			}
 		}
 		
 		
@@ -246,16 +280,38 @@ namespace AI.NeuronNetwork.Base
 		}
 		
 		// Матрицей считается размерности h, d. Вектором d
+		// Первый аргумент -- матрица весов, батч во втором
 		public static Tensor4<T> MultAsMatrix(Tensor4<T> A, Tensor4<T> B)
 		{
-			throw new NotImplementedException();
+			Tensor4<T> result = new Tensor4<T>(A.W, B.H, A.D, B.BS);
+			
+			for(int i = 0; i < B.BS; i++)
+				for (int j = 0; j < B.H; j++)
+					for (int k = 0; k < A.D; k++)
+						for (int z = 0; z < A.H; z++) 
+							result[0, j, k, i] += (A[0, z, k, i]as dynamic) *(B[0, j, z, i] as dynamic);
+			
+			return result;
 		}
 		
 		// Добавляет едину в конец к размерность d
 		// чтобы выполнить поляризацию нейрона
 		public static Tensor4<T> DeepAdd1(Tensor4<T> A)
 		{
-			throw new NotImplementedException();
+			Tensor4<T> result = new Tensor4<T>(A.W, A.H, A.D+1, A.BS);
+			
+			for (int i = 0; i < A.W; i++) 
+				for (int j = 0; j < A.H; j++)
+					for (int k = 0; k < A.D; k++)
+						for (int z = 0; z < A.BS; z++)
+							result[i, j, k, z] = A[i, j, k, z];
+			
+				for (int i = 0; i < A.W; i++) 
+				for (int j = 0; j < A.H; j++)
+						for (int z = 0; z < A.BS; z++)
+							result[i, j, A.D, z] = (dynamic)1;
+			
+				return result;
 		}
 	}
 }

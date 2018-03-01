@@ -15,6 +15,15 @@ namespace AI.NeuronNetwork.Base.LayerType
 	/// </summary>
 	public class Convolution<T> : ILayer<T>
 	{
+		public int OutDim {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
 		public double Norm {
 			get {
 				throw new NotImplementedException();
@@ -90,14 +99,6 @@ namespace AI.NeuronNetwork.Base.LayerType
 			}
 		}
 
-		public double Eps {
-			get {
-				throw new NotImplementedException();
-			}
-			set {
-				throw new NotImplementedException();
-			}
-		}
 
 		public Tensor4<T> Delts {
 			get {

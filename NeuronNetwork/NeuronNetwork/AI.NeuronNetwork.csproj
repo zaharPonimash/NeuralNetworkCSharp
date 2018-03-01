@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Base\ActivationType\Gauss.cs" />
     <Compile Include="Base\ActivationType\Maxout.cs" />
+    <Compile Include="Base\ActivationType\pReLu.cs" />
     <Compile Include="Base\ActivationType\ReLu.cs" />
     <Compile Include="Base\ActivationType\Sigmoid.cs" />
     <Compile Include="Base\ActivationType\Sin.cs" />

@@ -16,8 +16,7 @@ namespace AI.NeuronNetwork.Base
 	public interface ILayer<T>
 	{
 		int[] SizeOut{set; get;}
-		
-		double Eps{set; get;}
+		int OutDim{set; get;}
 		
 		double Norm{set; get;}
 		
