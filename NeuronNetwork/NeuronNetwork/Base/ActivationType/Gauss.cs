@@ -15,6 +15,15 @@ namespace AI.NeuronNetwork.Base.ActivationType
 	/// </summary>
 	public class Gauss<T>: ILayer<T>, IActivation
 	{
+		public double Norm {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
 		public Gauss()
 		{
 		}
@@ -26,6 +35,22 @@ namespace AI.NeuronNetwork.Base.ActivationType
 			throw new NotImplementedException();
 		}
 
+		public Tensor4<bool> Drop {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+		public Tensor4<T> Weights {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
 		public void Delt(Tensor4<T> ideal)
 		{
 			throw new NotImplementedException();

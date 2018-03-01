@@ -1,19 +1,20 @@
 ﻿/*
  * Создано в SharpDevelop.
  * Пользователь: admin
- * Дата: 28.02.2018
- * Время: 21:39
+ * Дата: 01.03.2018
+ * Время: 9:36
  * 
  * Для изменения этого шаблона используйте меню "Инструменты | Параметры | Кодирование | Стандартные заголовки".
  */
 using System;
 
+
 namespace AI.NeuronNetwork.Base.LayerType
 {
 	/// <summary>
-	/// Description of Pooling.
+	/// Description of DropOut.
 	/// </summary>
-	public class Pooling<T>: ILayer<T>
+	public class DropOut<T>: ILayer<T>
 	{
 		public double Norm {
 			get {
@@ -24,25 +25,7 @@ namespace AI.NeuronNetwork.Base.LayerType
 			}
 		}
 
-		public Tensor4<bool> Drop {
-			get {
-				throw new NotImplementedException();
-			}
-			set {
-				throw new NotImplementedException();
-			}
-		}
-
-	public Tensor4<T> Weights {
-		get {
-			throw new NotImplementedException();
-		}
-		set {
-			throw new NotImplementedException();
-		}
-	}
-
-		public Pooling()
+		public DropOut()
 		{
 		}
 
@@ -97,6 +80,24 @@ namespace AI.NeuronNetwork.Base.LayerType
 		}
 
 		public Tensor4<T> Delts {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
+		public Tensor4<bool> Drop {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
+		public Tensor4<T> Weights {
 			get {
 				throw new NotImplementedException();
 			}

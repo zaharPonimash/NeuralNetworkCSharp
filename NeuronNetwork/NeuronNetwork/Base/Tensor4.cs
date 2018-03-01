@@ -238,18 +238,21 @@ namespace AI.NeuronNetwork.Base
 		
 		
 		
-		
-		public static Tensor4<T> Convolutional(Tensor4<T> A, Tensor4<T> B)
+		// Сама функция может быть запараллелина, но параллелизация вдоль bs недопустима,
+		// т.к. собьются метки классов
+		public static Tensor4<T> ConvolutionalLayerForward(Tensor4<T> map, Tensor4<T> feature)
 		{
 			throw new NotImplementedException();
 		}
 		
-		
+		// Матрицей считается размерности h, d. Вектором d
 		public static Tensor4<T> MultAsMatrix(Tensor4<T> A, Tensor4<T> B)
 		{
 			throw new NotImplementedException();
 		}
 		
+		// Добавляет едину в конец к размерность d
+		// чтобы выполнить поляризацию нейрона
 		public static Tensor4<T> DeepAdd1(Tensor4<T> A)
 		{
 			throw new NotImplementedException();

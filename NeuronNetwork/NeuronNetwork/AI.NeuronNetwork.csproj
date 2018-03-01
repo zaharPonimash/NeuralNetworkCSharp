@@ -55,13 +55,16 @@
     <Compile Include="Base\IActivation.cs" />
     <Compile Include="Base\ILayer.cs" />
     <Compile Include="Base\LayerType\Convolution.cs" />
+    <Compile Include="Base\LayerType\DropOut.cs" />
     <Compile Include="Base\LayerType\FullConnect.cs" />
     <Compile Include="Base\LayerType\GRU.cs" />
     <Compile Include="Base\LayerType\LSTM.cs" />
     <Compile Include="Base\LayerType\Pooling.cs" />
     <Compile Include="Base\LayerType\UnPooling.cs" />
     <Compile Include="Base\Tensor4.cs" />
+    <Compile Include="ImageUtiletes.cs" />
     <Compile Include="Network.cs" />
+    <Compile Include="NeuralNetworkManeger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -15,6 +15,35 @@ namespace AI.NeuronNetwork.Base.LayerType
 	/// </summary>
 	public class Convolution<T> : ILayer<T>
 	{
+		public double Norm {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
+		
+		
+		public Tensor4<bool> Drop {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+		public Tensor4<T> Weights {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+		
+		
 		public Convolution()
 		{
 		}
@@ -26,6 +55,7 @@ namespace AI.NeuronNetwork.Base.LayerType
 			throw new NotImplementedException();
 		}
 
+		
 		public void Delt(Tensor4<T> ideal)
 		{
 			throw new NotImplementedException();

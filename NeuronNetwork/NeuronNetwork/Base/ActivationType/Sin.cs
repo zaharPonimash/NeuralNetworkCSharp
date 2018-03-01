@@ -15,6 +15,33 @@ namespace AI.NeuronNetwork.Base.ActivationType
 	/// </summary>
 	public class Sin<T>: ILayer<T>, IActivation
 	{
+		public double Norm {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
+		public Tensor4<bool> Drop {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
+	public Tensor4<T> Weights {
+		get {
+			throw new NotImplementedException();
+		}
+		set {
+			throw new NotImplementedException();
+		}
+	}
+
 		public Sin()
 		{
 		}

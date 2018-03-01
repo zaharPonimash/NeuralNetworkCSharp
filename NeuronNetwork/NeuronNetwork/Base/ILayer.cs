@@ -19,8 +19,18 @@ namespace AI.NeuronNetwork.Base
 		
 		double Eps{set; get;}
 		
+		double Norm{set; get;}
+		
 		//Дельты
 		Tensor4<T> Delts{set; get;}
+		
+		// ------- Метки весов для регуляризации ----
+		// Если false, то вес может иметь любое значение и изменяться
+		// в процессе обучения, если true, то значение только 0 и изменения невозможны. 		
+		Tensor4<bool> Drop{set; get;}
+		
+		// Веса НС
+		Tensor4<T> Weights{set; get;}
 		
 		// Прямой проход сети
 		Tensor4<T> Output(Tensor4<T> input);

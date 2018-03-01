@@ -16,6 +16,33 @@ namespace AI.NeuronNetwork.Base.LayerType
 	/// </summary>
 	public class FullConnect<T> : ILayer<T>
 	{
+		public double Norm {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
+		public Tensor4<bool> Drop {
+			get {
+				throw new NotImplementedException();
+			}
+			set {
+				throw new NotImplementedException();
+			}
+		}
+
+	public Tensor4<T> Weights {
+		get {
+			throw new NotImplementedException();
+		}
+		set {
+			throw new NotImplementedException();
+		}
+	}
+
 		
 		public int[] SizeOut {
 			get {
