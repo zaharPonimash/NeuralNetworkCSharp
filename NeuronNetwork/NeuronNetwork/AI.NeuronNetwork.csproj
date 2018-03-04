@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\ActivationType\Gauss.cs" />
+    <Compile Include="Base\ActivationType\Linear.cs" />
     <Compile Include="Base\ActivationType\Maxout.cs" />
     <Compile Include="Base\ActivationType\pReLu.cs" />
     <Compile Include="Base\ActivationType\ReLu.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Base\LayerType\Pooling.cs" />
     <Compile Include="Base\LayerType\UnPooling.cs" />
     <Compile Include="Base\Tensor4.cs" />
+    <Compile Include="Base\Tensor4GPU.cs" />
     <Compile Include="ImageUtiletes.cs" />
     <Compile Include="Network.cs" />
     <Compile Include="NeuralNetworkManeger.cs" />

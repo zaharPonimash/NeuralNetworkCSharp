@@ -1,24 +1,24 @@
 ﻿/*
  * Создано в SharpDevelop.
  * Пользователь: admin
- * Дата: 28.02.2018
- * Время: 20:45
+ * Дата: 02.03.2018
+ * Время: 13:51
  * 
  * Для изменения этого шаблона используйте меню "Инструменты | Параметры | Кодирование | Стандартные заголовки".
  */
 using System;
 
-namespace ConsoleTest
+namespace AI.NeuronNetwork.Base
 {
-	class Program
+	/// <summary>
+	/// Является оберткой над тензором для GPU,
+	/// основа написана на C++ с использованием OpenCL
+	/// </summary>
+	public class Tensor4GPU
 	{
-		public static void Main(string[] args)
+		public Tensor4GPU()
 		{
-			SpeedTest.SpeedFloat();
-			SpeedTest.SpeedDoubleTest();
-			SpeedTest.SpeedInt32Test();
 			
-			Console.ReadKey(true);
 		}
 	}
 }
