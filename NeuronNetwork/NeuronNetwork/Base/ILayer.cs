@@ -17,7 +17,6 @@ namespace AI.NeuronNetwork.Base
 	{
 		int[] SizeOut{set; get;}
 		int OutDim{set; get;}
-		
 		double Norm{set; get;}
 		
 		//Дельты

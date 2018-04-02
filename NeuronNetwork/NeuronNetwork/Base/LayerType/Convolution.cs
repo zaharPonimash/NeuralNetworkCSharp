@@ -13,8 +13,10 @@ namespace AI.NeuronNetwork.Base.LayerType
 	/// <summary>
 	/// Description of Convolution.
 	/// </summary>
-	public class Convolution<T> : ILayer<T>
+	public class Convolution<T> : ILayer<T>, INonActiv<T>
 	{
+		public Tensor4<T> Input {get; set;}
+
 		public int OutDim {
 			get {
 				throw new NotImplementedException();

@@ -13,8 +13,10 @@ namespace AI.NeuronNetwork.Base.ActivationType
 	/// <summary>
 	/// Description of Tanh.
 	/// </summary>
-	public class Tanh<T>: ILayer<T>, IActivation
+	public class Tanh<T>: ILayer<T>, IActivation<T>
 	{
+		public Tensor4<T> Outputs {get; set;}
+		
 		public int OutDim {
 			get {
 				throw new NotImplementedException();

@@ -56,6 +56,7 @@
     <Compile Include="Base\ActivationType\Tanh.cs" />
     <Compile Include="Base\IActivation.cs" />
     <Compile Include="Base\ILayer.cs" />
+    <Compile Include="Base\INonActiv.cs" />
     <Compile Include="Base\LayerType\Convolution.cs" />
     <Compile Include="Base\LayerType\DropOut.cs" />
     <Compile Include="Base\LayerType\FullConnect.cs" />

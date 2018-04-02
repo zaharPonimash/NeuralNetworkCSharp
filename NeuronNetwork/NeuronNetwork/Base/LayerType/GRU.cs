@@ -13,8 +13,10 @@ namespace AI.NeuronNetwork.Base.LayerType
 	/// <summary>
 	/// Description of GRU.
 	/// </summary>
-	public class GRU<T> : ILayer<T>
+	public class GRU<T> : ILayer<T>, INonActiv<T>
 	{
+		public Tensor4<T> Input {get; set;}
+
 		public int OutDim {
 			get {
 				throw new NotImplementedException();

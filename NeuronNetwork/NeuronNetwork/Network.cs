@@ -34,7 +34,7 @@ namespace AI.NeuronNetwork
 				layers.Add(layer);
 			}
 			
-			else if(layer is IActivation)
+			else if(layer is IActivation<T>)
 			{
 				layer.SizeOut = layers[layers.Count-1].SizeOut;
 				layers.Add(layer);

@@ -14,8 +14,10 @@ namespace AI.NeuronNetwork.Base.LayerType
 	/// <summary>
 	/// Description of FullConnect.
 	/// </summary>
-	public class FullConnect<T> : ILayer<T>
+	public class FullConnect<T> : ILayer<T>, INonActiv<T>
 	{
+		public Tensor4<T> Input {get; set;}
+
 		public int OutDim {get; set;}
 
 		public double Norm{get; set;}
@@ -62,7 +64,23 @@ namespace AI.NeuronNetwork.Base.LayerType
 
 		public void Train()
 		{
-			throw new NotImplementedException();
+			Tensor4<T> Grad1 = new Tensor4<T>(Delts.W, Delts.H, Delts.D, 1);
+			
+				for (int i = 0; i < Delts.W; i++)
+				for (int j = 0; j < Delts.H; j++)
+				for (int k = 0; k < Delts.D; k++)
+				for (int z = 0; z < Delts.BS;z++)
+				{
+					Grad1[i,j,k,0] += (Delts[i,j,k,z] as dynamic);
+				}
+				
+				Grad1 /= Delts.BS;
+				
+				for (int i = 0; i < Weights.H; i++)
+				for (int j = 0; j < Weights.D; j++)
+				{
+					Weights[0,i,j,0] -= (Grad1[0,0,i,0] as dynamic)*Input[0,0,j,0]*Norm;
+				}
 		}
 
 		public void SetParam(int w, int outp, int inp, int batchSize)

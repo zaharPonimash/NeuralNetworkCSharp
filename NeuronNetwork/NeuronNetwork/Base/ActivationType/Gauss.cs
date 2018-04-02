@@ -13,8 +13,10 @@ namespace AI.NeuronNetwork.Base.ActivationType
 	/// <summary>
 	/// Description of Gauss.
 	/// </summary>
-	public class Gauss<T>: ILayer<T>, IActivation
+	public class Gauss<T>: ILayer<T>, IActivation<T>
 	{
+		public Tensor4<T> Outputs {get; set;}
+
 		public int OutDim {
 			get {
 				throw new NotImplementedException();

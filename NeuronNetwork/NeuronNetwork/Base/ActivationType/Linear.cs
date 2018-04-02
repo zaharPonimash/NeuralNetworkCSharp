@@ -13,8 +13,9 @@ namespace AI.NeuronNetwork.Base.ActivationType
 	/// <summary>
 	/// Description of Linear.
 	/// </summary>
-	public class Linear<T> : ILayer<T>, IActivation
+	public class Linear<T> : ILayer<T>, IActivation<T>
 	{
+		public Tensor4<T> Outputs {get; set;}
 		public Linear()
 		{
 			

@@ -13,8 +13,12 @@ namespace AI.NeuronNetwork.Base.ActivationType
 	/// <summary>
 	/// Description of Sigmoid.
 	/// </summary>
-	public class Sigmoid<T>: ILayer<T>, IActivation
+	public class Sigmoid<T>: ILayer<T>, IActivation<T>
 	{
+		public Tensor4<T> Outputs {get; set;}
+		public int[] SizeOut{get; set;}
+		public Tensor4<T> Delts {get; set;}
+		
 		public int OutDim {
 			get {
 				throw new NotImplementedException();
@@ -102,22 +106,33 @@ namespace AI.NeuronNetwork.Base.ActivationType
 
 		public void Delt(Tensor4<T> ideal)
 		{
-			throw new NotImplementedException();
+			Delts = ideal-Outputs;
+//			Delts = new Tensor4<T>(delts.W, delts.H, delts.D, 1);
+//			
+//				for (int i = 0; i < Delts.W; i++)
+//				for (int j = 0; j < Delts.H; j++)
+//				for (int k = 0; k < Delts.D; k++)
+//				for (int z = 0; z < delts.BS;z++)
+//				{
+//					Delts[i,j,k,0] += (delts[i,j,k,z] as dynamic);
+//				}
+//				
+//				Delts /= delts.BS;
 		}
 
 		public void DeltH(ILayer<T> layer)
 		{
-			throw new NotImplementedException();
+			Delts = layer.Backwards();
 		}
 
 		public Tensor4<T> Backwards()
 		{
-			throw new NotImplementedException();
+		 	return Delts * Outputs*(1-Outputs);
 		}
 
 		public void Train()
 		{
-			throw new NotImplementedException();
+			
 		}
 
 		public void SetParam(int inp, int outp, int deep, int batchSize)
@@ -125,7 +140,7 @@ namespace AI.NeuronNetwork.Base.ActivationType
 			throw new NotImplementedException();
 		}
 
-		public int[] SizeOut{get; set;}
+		
 
 		public double Eps {
 			get {
@@ -136,14 +151,7 @@ namespace AI.NeuronNetwork.Base.ActivationType
 			}
 		}
 
-		public Tensor4<T> Delts {
-			get {
-				throw new NotImplementedException();
-			}
-			set {
-				throw new NotImplementedException();
-			}
-		}
+		
 
 		#endregion
 	}

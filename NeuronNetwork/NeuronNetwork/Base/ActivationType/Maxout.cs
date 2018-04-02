@@ -13,8 +13,9 @@ namespace AI.NeuronNetwork.Base.ActivationType
 	/// <summary>
 	/// Description of Maxout.
 	/// </summary>
-	public class Maxout<T>: ILayer<T>, IActivation
+	public class Maxout<T>: ILayer<T>, IActivation<T>
 	{
+		public Tensor4<T> Outputs {get; set;}
 		public int OutDim {
 			get {
 				throw new NotImplementedException();

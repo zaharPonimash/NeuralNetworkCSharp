@@ -45,6 +45,21 @@ namespace AI.NeuronNetwork.Base
 			Tensor = new T[w,h,d,bs];
 		}
 		
+		
+		public Tensor4(T[] data)
+		{
+			W = 1;
+			H = 1;
+			D = data.Length;
+			BS = 1;
+			Tensor = new T[1,1,D,1];
+			
+			for (int i = 0; i < D; i++) {
+				Tensor[0,0,i,0] = data[i];
+			}
+		}
+		
+		
 		public Tensor4(int w, int h, int d, int bs, Random rnd)
 		{
 			Tensor = new T[w,h,d,bs];
@@ -171,6 +186,8 @@ namespace AI.NeuronNetwork.Base
 						
 			return newTen;
 		}
+		
+		
 		
 		public static Tensor4<T> operator- (dynamic A, Tensor4<T> B)
 		{

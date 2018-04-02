@@ -14,8 +14,10 @@ namespace AI.NeuronNetwork.Base.LayerType
 	/// <summary>
 	/// Description of UnPooling.
 	/// </summary>
-	public class UnPooling<T>:ILayer<T>
+	public class UnPooling<T>:ILayer<T>, INonActiv<T>
 	{
+		public Tensor4<T> Input {get; set;}
+
 		public int OutDim {
 			get {
 				throw new NotImplementedException();

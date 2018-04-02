@@ -13,8 +13,9 @@ namespace AI.NeuronNetwork.Base.ActivationType
 	/// <summary>
 	/// Description of pReLu.
 	/// </summary>
-	public class pReLu<T> : ILayer<T>, IActivation
+	public class pReLu<T> : ILayer<T>, IActivation<T>
 	{
+		public Tensor4<T> Outputs {get; set;}
 		#region ILayer implementation
 
 	public Tensor4<T> Output(Tensor4<T> input)

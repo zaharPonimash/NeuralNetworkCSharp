@@ -13,8 +13,9 @@ namespace AI.NeuronNetwork.Base
 	/// <summary>
 	/// Description of IActivation.
 	/// </summary>
-	public interface IActivation
+	public interface IActivation<T>
 	{
 		double Eps{set; get;}
+		Tensor4<T> Outputs{set; get;}
 	}
 }
